@@ -23,7 +23,7 @@ RUN set -x && \
       "deb https://dl.yarnpkg.com/debian/ stable main" && \
     # install packages
     clean-install \
-      git ssh locales zip unzip \
+      git ssh locales zip bzip2 unzip \
       php${PHP_VERSION}-common \
       php${PHP_VERSION}-cli \
       nodejs yarn docker-ce && \
