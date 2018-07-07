@@ -27,6 +27,7 @@ RUN set -x && \
       php${PHP_VERSION}-common \
       php${PHP_VERSION}-cli \
       php${PHP_VERSION}-sqlite3 \
+      php${PHP_VERSION}-xml \
       nodejs yarn docker-ce && \
     sed -i '/de_DE/s/^# //g' /etc/locale.gen && \
     ln -s /etc/locale.alias /usr/share/locale/locale.alias && \
