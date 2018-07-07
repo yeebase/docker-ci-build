@@ -30,7 +30,7 @@ RUN set -x && \
       php${PHP_VERSION}-xml \
       nodejs yarn docker-ce && \
     sed -i '/de_DE/s/^# //g' /etc/locale.gen && \
-    ln -s /etc/locale.alias /usr/share/locale/locale.alias && \
+    ln -sf /etc/locale.alias /usr/share/locale/locale.alias && \
     locale-gen && \
     npm install --global gulp-cli && \
     # install composer
