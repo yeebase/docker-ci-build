@@ -23,7 +23,7 @@ RUN set -x && \
       "deb https://dl.yarnpkg.com/debian/ stable main" && \
     # install packages
     clean-install \
-      git ssh locales zip unzip \
+      git ssh locales zip bzip2 sqlite unzip \
       php${PHP_VERSION}-common \
       php${PHP_VERSION}-curl \
       php${PHP_VERSION}-cli \
@@ -31,7 +31,7 @@ RUN set -x && \
       php${PHP_VERSION}-xml \
       nodejs yarn docker-ce && \
     sed -i '/de_DE/s/^# //g' /etc/locale.gen && \
-    ln -s /etc/locale.alias /usr/share/locale/locale.alias && \
+    ln -sf /etc/locale.alias /usr/share/locale/locale.alias && \
     locale-gen && \
     npm install --global gulp-cli && \
     # install composer
