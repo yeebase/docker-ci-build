@@ -25,6 +25,7 @@ RUN set -x && \
     clean-install \
       git ssh locales zip bzip2 sqlite unzip \
       php${PHP_VERSION}-common \
+      php${PHP_VERSION}-curl \
       php${PHP_VERSION}-cli \
       php${PHP_VERSION}-sqlite3 \
       php${PHP_VERSION}-xml \
