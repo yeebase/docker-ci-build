@@ -25,7 +25,10 @@ RUN set -x && \
     clean-install \
       git ssh locales zip unzip \
       php${PHP_VERSION}-common \
+      php${PHP_VERSION}-curl \
       php${PHP_VERSION}-cli \
+      php${PHP_VERSION}-sqlite3 \
+      php${PHP_VERSION}-xml \
       nodejs yarn docker-ce && \
     sed -i '/de_DE/s/^# //g' /etc/locale.gen && \
     ln -s /etc/locale.alias /usr/share/locale/locale.alias && \
