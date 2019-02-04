@@ -18,6 +18,7 @@ RUN set -x && \
     # nodejs repo
     curl -fsSL https://deb.nodesource.com/setup_${NODEJS_VERSION}.x | bash - && \
     # yarn repo
+
     curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     add-apt-repository \
       "deb https://dl.yarnpkg.com/debian/ stable main" && \
@@ -27,8 +28,8 @@ RUN set -x && \
       php${PHP_VERSION}-common \
       php${PHP_VERSION}-curl \
       php${PHP_VERSION}-cli \
-      php{PHP_VERSION}-gd \
-      php{PHP_VERSION}-mysql \
+      php${PHP_VERSION}-gd \
+      php${PHP_VERSION}-mysql \
       php${PHP_VERSION}-mbstring \
       php${PHP_VERSION}-sqlite3 \
       php${PHP_VERSION}-xml \
