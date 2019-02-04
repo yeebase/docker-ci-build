@@ -24,7 +24,7 @@ RUN set -x && \
       "deb https://dl.yarnpkg.com/debian/ stable main" && \
     # install packages
     clean-install \
-      git ssh locales zip bzip2 sqlite unzip \
+      git ssh locales zip bzip2 sqlite unzip make \
       php${PHP_VERSION}-common \
       php${PHP_VERSION}-curl \
       php${PHP_VERSION}-cli \
