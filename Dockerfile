@@ -25,6 +25,10 @@ RUN set -x && \
     # install packages
     clean-install \
       git ssh locales zip bzip2 sqlite unzip make \
+
+      # cypress deps: https://docs.cypress.io/guides/guides/continuous-integration.html#Dependencies
+      xvfb libgtk2.0-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 \
+
       php${PHP_VERSION}-common \
       php${PHP_VERSION}-curl \
       php${PHP_VERSION}-cli \
