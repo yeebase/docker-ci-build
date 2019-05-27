@@ -3,10 +3,11 @@ FROM quay.io/yeebase/debian-base:stretch
 ENV PHP_VERSION 7.2
 ENV NODEJS_VERSION 10
 ENV DOCKER_COMPOSE_VERSION 1.21.2
+ENV DOCKERIZE_VERSION v0.6.1
 
 RUN set -x && \
     # install fetch and build packages
-    clean-install apt-transport-https lsb-release ca-certificates curl gnupg2 \
+    clean-install apt-transport-https lsb-release ca-certificates curl gnupg2 wget \
       software-properties-common && \
     # php repo
     curl -sL https://packages.sury.org/php/apt.gpg -o /etc/apt/trusted.gpg.d/php.gpg && \
@@ -48,6 +49,10 @@ RUN set -x && \
     # install docker-compose
     curl -fsSL "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
     chmod +x /usr/local/bin/docker-compose
+
+RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
+    && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 ENV LANG=de_DE.UTF-8
 ENV LANGUAGE=de_DE.UTF-8
