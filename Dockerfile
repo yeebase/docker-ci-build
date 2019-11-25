@@ -1,9 +1,9 @@
 FROM quay.io/yeebase/debian-base:stretch
 
-ENV PHP_VERSION 7.2
+ENV PHP_VERSION 7.3
 ENV NODEJS_VERSION 10
-ENV DOCKER_COMPOSE_VERSION 1.21.2
 ENV DOCKERIZE_VERSION v0.6.1
+ENV DOCKER_COMPOSE_VERSION 1.23.2
 
 RUN set -x && \
     # install fetch and build packages
