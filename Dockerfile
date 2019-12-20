@@ -34,6 +34,7 @@ RUN set -x && \
   php${PHP_VERSION}-curl \
   php${PHP_VERSION}-cli \
   php${PHP_VERSION}-gd \
+  php${PHP_VERSION}-redis \
   php${PHP_VERSION}-mysql \
   php${PHP_VERSION}-mbstring \
   php${PHP_VERSION}-sqlite3 \
