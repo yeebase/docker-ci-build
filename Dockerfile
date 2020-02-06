@@ -7,7 +7,7 @@ ENV DOCKER_COMPOSE_VERSION 1.23.2
 
 RUN set -x && \
   # install fetch and build packages
-  clean-install apt-transport-https lsb-release ca-certificates curl gnupg2 wget \
+  clean-install apt-transport-https lsb-release ca-certificates curl gnupg2 wget dh-autoreconf \
   software-properties-common && \
   # php repo
   curl -sL https://packages.sury.org/php/apt.gpg -o /etc/apt/trusted.gpg.d/php.gpg && \
