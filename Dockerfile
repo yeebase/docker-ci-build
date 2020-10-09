@@ -1,4 +1,4 @@
-FROM quay.io/yeebase/debian-base:stretch
+FROM t3nde/debian-base:stretch
 
 ENV PHP_VERSION 7.2
 ENV NODEJS_VERSION 10
