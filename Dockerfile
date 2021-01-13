@@ -39,6 +39,7 @@ RUN set -x && \
   php${PHP_VERSION}-mbstring \
   php${PHP_VERSION}-sqlite3 \
   php${PHP_VERSION}-xml \
+  php${PHP_VERSION}-soap \
   nodejs yarn docker-ce && \
   sed -i '/de_DE/s/^# //g' /etc/locale.gen && \
   ln -sf /etc/locale.alias /usr/share/locale/locale.alias && \
