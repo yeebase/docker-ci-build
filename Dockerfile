@@ -4,6 +4,7 @@ ENV PHP_VERSION 7.3
 ENV NODEJS_VERSION 10
 ENV DOCKERIZE_VERSION v0.6.1
 ENV DOCKER_COMPOSE_VERSION 1.23.2
+ENV COMPOSER_VERSION 2.0.9
 
 RUN set -x && \
   # install fetch and build packages
@@ -46,9 +47,8 @@ RUN set -x && \
   locale-gen && \
   npm install --global gulp-cli && \
   # install composer
-  curl -fsSL https://getcomposer.org/composer-stable.phar -o /usr/local/bin/composer && \
+  curl -fsSL https://getcomposer.org/download/${COMPOSER_VERSION}/composer.phar -o /usr/local/bin/composer && \
   chmod +x /usr/local/bin/composer && \
-  composer self-update 1.10.2 && \
   # install docker-compose
   curl -fsSL "https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && \
   chmod +x /usr/local/bin/docker-compose
