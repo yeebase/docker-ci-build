@@ -19,7 +19,6 @@ RUN set -x && \
   # nodejs repo
   curl -fsSL https://deb.nodesource.com/setup_${NODEJS_VERSION}.x | bash - && \
   # yarn repo
-
   curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
   add-apt-repository \
   "deb https://dl.yarnpkg.com/debian/ stable main" && \
@@ -29,6 +28,8 @@ RUN set -x && \
 
   # cypress deps: https://docs.cypress.io/guides/guides/continuous-integration.html#Dependencies
   xvfb libgtk2.0-0 libgtk-3-0 libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 \
+  
+  python-dev \
 
   php${PHP_VERSION}-common \
   php${PHP_VERSION}-curl \
